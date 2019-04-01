@@ -5,9 +5,8 @@ do
   time="$(curl -w "$format" -o /dev/null -s "$site")"
   short="${time:0:1}"
   if [ "$short" -gt 4 ]; then
-  echo "red alert - $site - red alert"; 
+  echo "Placeholder for code that will send an email for a downed site."; 
   elif [ "$short" -le 4 ]; then
-  echo "$site - we good";
+  echo "$site is ok. Date: $(date). Page Load Time: $time seconds." >> logs/uptime.log;
   fi
-echo "Date: $(date). Page Load Time: $time seconds."
 done
