@@ -15,7 +15,5 @@ do
  fi
  if [[ "$status" == "40"* ]]; then
   curl -X POST -H 'Content-type: application/json' --data '{"text":"'$site' is reporting 404."}' $slack && echo "$site is down. Slack notified on $(date)" >> $logs;
-  elif [[ "$status" != "40"* ]]; then
-  curl -X POST -H 'Content-type: application/json' --data '{"text":"'$site' is reporting ok (testing script)."}' $slack;
  fi
 done
