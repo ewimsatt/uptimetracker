@@ -5,7 +5,7 @@
 #
 
 # If you would like to change your log location, change it here.
-log="logs/uptime.log"
+logs="logs/uptime.log"
 
 # Slack webhook integration - enter the url for your channel webhook.
 slack=""
