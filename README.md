@@ -4,6 +4,7 @@ This is a purely BASH website uptime tracker. It will notify a slack channel whe
 
 To use:
 * Rename the config/uptimetracker.conf.default to config/uptimetracker.conf
+* Rename the config/sitelist.txt.default to config/sitelist.txt and add the sites you want to track to it
 * Add your slack channel webhook to the config/uptimetracker.conf
 * Add sites you want to track to config/sitelist.txt
 * Add a cron (this example is every minute):
