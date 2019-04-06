@@ -9,3 +9,6 @@ To use:
 * Add sites you want to track to config/sitelist.txt
 * Add a cron (this example is every minute):
   * \* * * * * /path/to/your/uptimetracker/uptimetracker.sh >> /dev/null 2>&1
+
+
+The script checks for page loadtimes and checks to see if there is a /sitemap.xml. Checking for a sitemap will confirm that MySQL is online rather than Apache serving a "Unable to connect to database" page (WordPress example.) 
