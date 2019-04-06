@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $(dirname $0)
 source config/uptimetracker.conf
-cat config/sitelist.txt | sort -u | while read site
+cat config/sitelist.txt | sed 's/#.*//g' | sort -u | while read site
 do 
   format="%{time_total}"
   sitemap="/sitemap.xml"
