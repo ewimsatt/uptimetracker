@@ -4,7 +4,7 @@ source config/uptimetracker.conf
 cat config/sitelist.txt | sed 's/#.*//g' | sort -u | while read site
 do 
   format="%{time_total}"
-  sitemap="sitemap.xml"
+  sitemap="/sitemap.xml"
   time="$(curl -w "$format" -o /dev/null -s "$site")"
   short="${time:0:1}"
   status="$(curl -I "$site$sitemap" | grep HTTP | awk '{print $2}')"
