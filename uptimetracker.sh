@@ -1,4 +1,5 @@
 #!/bin/bash
+# Simple Uptime Tracker for BASH
 cd $(dirname $0)
 source config/uptimetracker.conf
 cat config/sitelist.txt | sed 's/#.*//g' | sort -u | while read site
