@@ -11,4 +11,23 @@ To use:
   * \* * * * * /path/to/your/uptimetracker/uptimetracker.sh >> /dev/null 2>&1
 
 
-The script checks for page loadtimes and checks to see if there is a /sitemap.xml. Checking for a sitemap will confirm that MySQL is online rather than Apache serving a "Unable to connect to database" page (WordPress example.) 
+The script checks for page loadtimes and checks to see if there is a /sitemap.xml. Checking for a sitemap will confirm that MySQL is online rather than Apache serving a "Unable to connect to database" page (WordPress example.)
+
+## Features
+
+* **Page load time monitoring** - Alerts when sites load slower than threshold (default 4s)
+* **HTTP status checking** - Detects 4xx/5xx errors on main page
+* **Database health check** - Monitors sitemap availability as DB proxy
+* **Retry logic** - 3 attempts before alerting (prevents false alarms)
+* **Continuous alerts** - Keeps alerting while issues persist (not just once)
+* **Simple logging** - All checks logged with timestamps and HTTP status
+
+## Recent Updates (2026-02-14)
+
+* Fixed load time comparison bug (now works for times >10 seconds)
+* Added main page HTTP status checking
+* Added retry logic (3 attempts with delays)
+* Fixed variable inconsistency in logging
+* More informative Slack messages with HTTP codes
+
+See [CHANGELOG.md](CHANGELOG.md) for full details. 
